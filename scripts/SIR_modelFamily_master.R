@@ -148,16 +148,16 @@ for(ii in 2:floor(NREPS/2)){
 
 ts_cb <- sir_6(
   y = init,                  # Initial conditions for population
-  tstep = 0.5,               # Timestep
+  tstep = 0.05,               # Timestep
   parms = values.cb          # Vector of parameters
 )
 
 plotSIR(ts_cb, plotLab = 'B6', lwd = 1, col = brewer.pal(9, 'Set1')[1], type = 's')
 
-for(ii in 2:NREPS){
+for(ii in 2:floor(NREPS/2)){
   ts_cb <- sir_6(
     y = init,                # Initial conditions for population
-    tstep = 0.5,             # Timestep
+    tstep = 0.05,             # Timestep
     parms = values.cb           # Vector of parameters
   )
   lines(ts_cb$time,          # Time on the x axis
